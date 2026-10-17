@@ -1,0 +1,5 @@
+# 冻结件：oracle 与回归集。任何 agent 不得原地修改；需修订请新增版本文件。
+7eb920a1561a32aa1523d18681490b5eab6179b89faafacc0e35405637a5f690  coverage_planner.py
+a38cb19d330ee6568e5fcd0970b2e3a4512638ab68c93e607ad3c21a68cccb48  run_regressions.py
+a0b7151c351cc28fa5e85c995251f84bbdb0f19653663d66e4ae9b6181977917  regression_set.coverage.json
+a5447e20932f9e19c6a67196c628f8d9a55696f1c92520d0f24e663b17c24f6a  regression_set.coverage.v2.json

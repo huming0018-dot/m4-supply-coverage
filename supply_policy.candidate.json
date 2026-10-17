@@ -1,0 +1,3019 @@
+{
+  "schema": "m4.coverage.policy_candidate/v1",
+  "pack_ref": {
+    "name": "food-tree",
+    "adopted_by_root": {
+      "version": "1.1.0",
+      "hash": "2d7a034e36e629519f47574031be499719b126d1deace1bc048f97d2531faab0"
+    },
+    "deuce_unadopted": {
+      "version": "1.0.0",
+      "hash": "f94de00fcb1d746f69a8ea96a897df21d36b2ad3418d02cf3e48b05dc33a4955"
+    },
+    "note": "node_ids validated against the 495-node seed (a9120f2d); mapping to Root 1.1.0 to be re-read by Root via KS get_package"
+  },
+  "taxonomy_seed": {
+    "path": "/tmp/m4-prd-correction-s1r-r0bwlF/taxonomy.seed.json",
+    "sha256": "a9120f2d7ad6fd4e22d4313942a3dd66cf47b17ff0e42e074bcb7d9443e087ae",
+    "node_count": 495
+  },
+  "price_facet": {
+    "economy": "<50",
+    "value": "50-99",
+    "mid": "100-199",
+    "high": "200-499",
+    "luxury": ">=500",
+    "unit": "CNY_per_person_per_meal_historical_DB"
+  },
+  "independent_diner_admission": {
+    "allowed_statuses": [
+      "verified_independent_diner"
+    ],
+    "requires_identity_evidence": true,
+    "unknown_statuses": [
+      "brand_new_unrecognized",
+      "m2_review",
+      "lexical_match",
+      "ocr_low_confidence",
+      null
+    ],
+    "note": "independent_diner=true alone never counts as a diner voice; missing/unknown status stays unknown"
+  },
+  "policy_disclaimer": "target_quota are 2026-09-23 engineering collection targets (policy candidate, Owner adoption NOT approved). observed_historical is historical batch evidence, not current market fact. No numeric market supply is invented.",
+  "cells": [
+    {
+      "cell_id": "yueA_cantonese_meal",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.cantonese"
+      ],
+      "crossfacet": {
+        "price_tier": [
+          "mid",
+          "high"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 4,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "档位（DB口径：经济<50/平价50-99/中档100-199/高档200-499/奢华≥500）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "mapped",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 5,
+        "comparator": ">=",
+        "price_band_min_count": 2,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 5,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "配额：供给充足叶子≥5家覆盖≥2档；一般≥3；稀缺≥2并标注。候选池=精选×2。",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 4,
+        "price_bands": [
+          "mid",
+          "high"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 15,
+          "line_end": 15,
+          "quote_status": "excerpt",
+          "exact_quote": "广府正餐/老火汤 … 4家，偏中档~高档，缺平价档",
+          "excerpt": "广府正餐/老火汤 … 4家，偏中档~高档，缺平价档",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": "广府正餐/老火汤；历史回填口径grid_A行96"
+    },
+    {
+      "cell_id": "yueA_cantonese_seafood",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.seafood",
+        "cuisine.china.guangdong.cantonese"
+      ],
+      "crossfacet": {
+        "price_tier": [
+          "high"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 4,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "档位（DB口径：经济<50/平价50-99/中档100-199/高档200-499/奢华≥500）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "mapped",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 3,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 5,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "配额：供给充足叶子≥5家覆盖≥2档；一般≥3；稀缺≥2并标注。候选池=精选×2。",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 2,
+        "price_bands": [
+          "high"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 16,
+          "line_end": 16,
+          "quote_status": "excerpt",
+          "exact_quote": "海鲜酒楼（广府系） … 2家，需补1家",
+          "excerpt": "海鲜酒楼（广府系） … 2家，需补1家",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": "海鲜酒楼（广府系）"
+    },
+    {
+      "cell_id": "yueA_siu_lap",
+      "city": "Shanghai",
+      "node_ids": [],
+      "crossfacet": {
+        "price_tier": [
+          "value",
+          "mid"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 4,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "档位（DB口径：经济<50/平价50-99/中档100-199/高档200-499/奢华≥500）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "pending_review",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 3,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 5,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "配额：供给充足叶子≥5家覆盖≥2档；一般≥3；稀缺≥2并标注。候选池=精选×2。",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 3,
+        "price_bands": [
+          "value",
+          "mid"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 17,
+          "line_end": 17,
+          "quote_status": "excerpt",
+          "exact_quote": "烧腊/烧味专门 … 3家+，覆盖平价~中档",
+          "excerpt": "烧腊/烧味专门 … 3家+，覆盖平价~中档",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": "495无烧腊/烧味稳定节点；offer.snack.braised为卤味非烧腊，不硬挂"
+    },
+    {
+      "cell_id": "yueA_shunde",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.shunde"
+      ],
+      "crossfacet": {
+        "price_tier": [
+          "mid",
+          "high"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 4,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "档位（DB口径：经济<50/平价50-99/中档100-199/高档200-499/奢华≥500）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "mapped",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 3,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 5,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "配额：供给充足叶子≥5家覆盖≥2档；一般≥3；稀缺≥2并标注。候选池=精选×2。",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 4,
+        "price_bands": [
+          "mid",
+          "high"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 23,
+          "line_end": 23,
+          "quote_status": "excerpt",
+          "exact_quote": "顺德菜 … 4家，覆盖中档~高档",
+          "excerpt": "顺德菜 … 4家，覆盖中档~高档",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": ""
+    },
+    {
+      "cell_id": "yueA_hakka",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.hakka"
+      ],
+      "crossfacet": {
+        "price_tier": [
+          "value",
+          "mid"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 4,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "档位（DB口径：经济<50/平价50-99/中档100-199/高档200-499/奢华≥500）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "mapped",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 3,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 5,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "配额：供给充足叶子≥5家覆盖≥2档；一般≥3；稀缺≥2并标注。候选池=精选×2。",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 5,
+        "price_bands": [
+          "value",
+          "mid"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 29,
+          "line_end": 29,
+          "quote_status": "excerpt",
+          "exact_quote": "客家菜 … 5家，覆盖平价~中档",
+          "excerpt": "客家菜 … 5家，覆盖平价~中档",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": "跨维传统另见tradition.cross_region.hakka"
+    },
+    {
+      "cell_id": "yueA_cha_chaan_teng",
+      "city": "Shanghai",
+      "node_ids": [],
+      "crossfacet": {
+        "price_tier": [
+          "value"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 4,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "档位（DB口径：经济<50/平价50-99/中档100-199/高档200-499/奢华≥500）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "pending_review",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 5,
+        "comparator": ">=",
+        "price_band_min_count": 2,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 5,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "配额：供给充足叶子≥5家覆盖≥2档；一般≥3；稀缺≥2并标注。候选池=精选×2。",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 6,
+        "price_bands": [
+          "value"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 35,
+          "line_end": 35,
+          "quote_status": "excerpt",
+          "exact_quote": "港式茶餐厅/冰室 … 6家，平价档为主",
+          "excerpt": "港式茶餐厅/冰室 … 6家，平价档为主",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": "495无港式茶餐厅/冰室稳定节点"
+    },
+    {
+      "cell_id": "yueA_dim_sum",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.snack.dim_sum"
+      ],
+      "crossfacet": {
+        "price_tier": [
+          "value",
+          "mid",
+          "high"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 4,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "档位（DB口径：经济<50/平价50-99/中档100-199/高档200-499/奢华≥500）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "partial_pending",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 5,
+        "comparator": ">=",
+        "price_band_min_count": 2,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 5,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "配额：供给充足叶子≥5家覆盖≥2档；一般≥3；稀缺≥2并标注。候选池=精选×2。",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 6,
+        "price_bands": [
+          "value",
+          "mid",
+          "high"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 41,
+          "line_end": 41,
+          "quote_status": "excerpt",
+          "exact_quote": "早茶点心 … 6家，覆盖亲民~高档",
+          "excerpt": "早茶点心 … 6家，覆盖亲民~高档",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": "dish.snack.dim_sum为广式点心，早茶(饮茶)服务形态无专门节点"
+    },
+    {
+      "cell_id": "yueA_congee_noodle_rice",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.noodle",
+        "offer.specialty.rice"
+      ],
+      "crossfacet": {
+        "price_tier": [
+          "value",
+          "mid"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 4,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "档位（DB口径：经济<50/平价50-99/中档100-199/高档200-499/奢华≥500）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "partial_pending",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 3,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 5,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "配额：供给充足叶子≥5家覆盖≥2档；一般≥3；稀缺≥2并标注。候选池=精选×2。",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 4,
+        "price_bands": [
+          "value",
+          "mid"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 47,
+          "line_end": 47,
+          "quote_status": "excerpt",
+          "exact_quote": "粥粉面 … 4家，覆盖平价~中档",
+          "excerpt": "粥粉面 … 4家，覆盖平价~中档",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": "三品类聚合格，无单一粥粉面节点"
+    },
+    {
+      "cell_id": "yueA_jue_jue_claypot",
+      "city": "Shanghai",
+      "node_ids": [],
+      "crossfacet": {
+        "price_tier": [
+          "mid"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 4,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "档位（DB口径：经济<50/平价50-99/中档100-199/高档200-499/奢华≥500）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "pending_review",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 3,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 5,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "配额：供给充足叶子≥5家覆盖≥2档；一般≥3；稀缺≥2并标注。候选池=精选×2。",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 3,
+        "price_bands": [
+          "mid"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 53,
+          "line_end": 53,
+          "quote_status": "excerpt",
+          "exact_quote": "啫啫煲/煲仔饭 … 3家，中档为主",
+          "excerpt": "啫啫煲/煲仔饭 … 3家，中档为主",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": "495无啫啫煲/煲仔饭稳定节点"
+    },
+    {
+      "cell_id": "yueA_fine_dining",
+      "city": "Shanghai",
+      "node_ids": [],
+      "crossfacet": {
+        "price_tier": [
+          "high",
+          "luxury"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 4,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "档位（DB口径：经济<50/平价50-99/中档100-199/高档200-499/奢华≥500）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "pending_review",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 2,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 5,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "配额：供给充足叶子≥5家覆盖≥2档；一般≥3；稀缺≥2并标注。候选池=精选×2。",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 3,
+        "price_bands": [
+          "high",
+          "luxury"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_A.md",
+          "source_sha256": "c208ccbcc6c2fb3233fb903180528f8ef7290cb42f2bfa2111e138604db34cd5",
+          "line_start": 59,
+          "line_end": 59,
+          "quote_status": "excerpt",
+          "exact_quote": "粤菜 Fine Dining … 3家，覆盖高档~奢华",
+          "excerpt": "粤菜 Fine Dining … 3家，覆盖高档~奢华",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": "495无fine-dining/价格轴节点"
+    },
+    {
+      "cell_id": "yueB_chaoshan_meal_value",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet": {
+        "price_tier": [
+          "value"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 12,
+          "line_end": 13,
+          "quote_status": "verbatim",
+          "exact_quote": "经济档 <50 / 平价 50–99 / 中档 100–199 / 高档 200–499 / 奢华 ≥500",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "mapped",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 2,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 21,
+          "line_end": 22,
+          "quote_status": "excerpt",
+          "exact_quote": "潮汕菜馆 · 亲民(≤99) … ≥2",
+          "excerpt": "潮汕菜馆 · 亲民(≤99) … ≥2",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 2,
+        "price_bands": [
+          "value"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 21,
+          "line_end": 22,
+          "quote_status": "excerpt",
+          "exact_quote": "姚益记…潮界…",
+          "excerpt": "姚益记…潮界…",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": ""
+    },
+    {
+      "cell_id": "yueB_chaoshan_meal_mid",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet": {
+        "price_tier": [
+          "mid"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 12,
+          "line_end": 13,
+          "quote_status": "verbatim",
+          "exact_quote": "经济档 <50 / 平价 50–99 / 中档 100–199 / 高档 200–499 / 奢华 ≥500",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "mapped",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 3,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 23,
+          "line_end": 25,
+          "quote_status": "excerpt",
+          "exact_quote": "潮汕菜馆 · 中档(100–199) … ≥3",
+          "excerpt": "潮汕菜馆 · 中档(100–199) … ≥3",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 3,
+        "price_bands": [
+          "mid"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 23,
+          "line_end": 25,
+          "quote_status": "excerpt",
+          "exact_quote": "家府潮汕菜…潮禧…瑞狮楼",
+          "excerpt": "家府潮汕菜…潮禧…瑞狮楼",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": ""
+    },
+    {
+      "cell_id": "yueB_chaoshan_meal_high",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet": {
+        "price_tier": [
+          "high"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 12,
+          "line_end": 13,
+          "quote_status": "verbatim",
+          "exact_quote": "经济档 <50 / 平价 50–99 / 中档 100–199 / 高档 200–499 / 奢华 ≥500",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "mapped",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 1,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 26,
+          "line_end": 26,
+          "quote_status": "excerpt",
+          "exact_quote": "潮汕菜馆 · 高档(200+) … ≥1",
+          "excerpt": "潮汕菜馆 · 高档(200+) … ≥1",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 1,
+        "price_bands": [
+          "high"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 26,
+          "line_end": 26,
+          "quote_status": "excerpt",
+          "exact_quote": "头家夜粥 … ~300+",
+          "excerpt": "头家夜粥 … ~300+",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": ""
+    },
+    {
+      "cell_id": "yueB_beef_hotpot_value",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.hotpot",
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet": {
+        "price_tier": [
+          "value"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 12,
+          "line_end": 13,
+          "quote_status": "verbatim",
+          "exact_quote": "经济档 <50 / 平价 50–99 / 中档 100–199 / 高档 200–499 / 奢华 ≥500",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "partial_pending",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 2,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 27,
+          "line_end": 28,
+          "quote_status": "excerpt",
+          "exact_quote": "潮汕牛肉火锅 · 平价(50–99) … ≥2",
+          "excerpt": "潮汕牛肉火锅 · 平价(50–99) … ≥2",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 2,
+        "price_bands": [
+          "value"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 27,
+          "line_end": 28,
+          "quote_status": "excerpt",
+          "exact_quote": "八合里海记…潮牛嗨…",
+          "excerpt": "八合里海记…潮牛嗨…",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": "hotpot为通用节点，无潮汕牛肉火锅专门节点"
+    },
+    {
+      "cell_id": "yueB_beef_hotpot_mid",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.hotpot",
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet": {
+        "price_tier": [
+          "mid"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 12,
+          "line_end": 13,
+          "quote_status": "verbatim",
+          "exact_quote": "经济档 <50 / 平价 50–99 / 中档 100–199 / 高档 200–499 / 奢华 ≥500",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "partial_pending",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 3,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 29,
+          "line_end": 33,
+          "quote_status": "excerpt",
+          "exact_quote": "潮汕牛肉火锅 · 中档(100–199) … ≥3",
+          "excerpt": "潮汕牛肉火锅 · 中档(100–199) … ≥3",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 5,
+        "price_bands": [
+          "mid"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 29,
+          "line_end": 33,
+          "quote_status": "excerpt",
+          "exact_quote": "今日牛事…左庭右院…下山虎…宽马记…潮汕草根",
+          "excerpt": "今日牛事…左庭右院…下山虎…宽马记…潮汕草根",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": ""
+    },
+    {
+      "cell_id": "yueB_da_leng_sheng_yan",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.snack.braised"
+      ],
+      "crossfacet": {
+        "price_tier": [
+          "mid"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 12,
+          "line_end": 13,
+          "quote_status": "verbatim",
+          "exact_quote": "经济档 <50 / 平价 50–99 / 中档 100–199 / 高档 200–499 / 奢华 ≥500",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "partial_pending",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 3,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 34,
+          "line_end": 37,
+          "quote_status": "excerpt",
+          "exact_quote": "潮汕卤味/打冷/生腌专门 · 中档 … ≥3",
+          "excerpt": "潮汕卤味/打冷/生腌专门 · 中档 … ≥3",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 4,
+        "price_bands": [
+          "mid"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 34,
+          "line_end": 37,
+          "quote_status": "excerpt",
+          "exact_quote": "任兴记…海缘居…神更仔…潮府夜档",
+          "excerpt": "任兴记…海缘居…神更仔…潮府夜档",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": "braised仅覆盖卤味，打冷/生腌无节点"
+    },
+    {
+      "cell_id": "yueB_congee_guotiao_value",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.rice",
+        "dish.staple.rice_noodle"
+      ],
+      "crossfacet": {
+        "price_tier": [
+          "value"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 12,
+          "line_end": 13,
+          "quote_status": "verbatim",
+          "exact_quote": "经济档 <50 / 平价 50–99 / 中档 100–199 / 高档 200–499 / 奢华 ≥500",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "partial_pending",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 2,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 38,
+          "line_end": 39,
+          "quote_status": "excerpt",
+          "exact_quote": "砂锅粥/粿条 · 平价 … ≥2",
+          "excerpt": "砂锅粥/粿条 · 平价 … ≥2",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 2,
+        "price_bands": [
+          "value"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 38,
+          "line_end": 39,
+          "quote_status": "excerpt",
+          "exact_quote": "留住阁…潮顺潮汕牛肉粿条",
+          "excerpt": "留住阁…潮顺潮汕牛肉粿条",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": ""
+    },
+    {
+      "cell_id": "yueB_congee_guotiao_mid",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.rice"
+      ],
+      "crossfacet": {
+        "price_tier": [
+          "mid"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 12,
+          "line_end": 13,
+          "quote_status": "verbatim",
+          "exact_quote": "经济档 <50 / 平价 50–99 / 中档 100–199 / 高档 200–499 / 奢华 ≥500",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "partial_pending",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 1,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 40,
+          "line_end": 40,
+          "quote_status": "excerpt",
+          "exact_quote": "砂锅粥/粿条 · 中档 … ≥1",
+          "excerpt": "砂锅粥/粿条 · 中档 … ≥1",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 1,
+        "price_bands": [
+          "mid"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 40,
+          "line_end": 40,
+          "quote_status": "verbatim",
+          "exact_quote": "夜阑静·潮汕海鲜粥城",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": ""
+    },
+    {
+      "cell_id": "yueB_seafood_da_leng",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.seafood"
+      ],
+      "crossfacet": {
+        "price_tier": [
+          "mid"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 12,
+          "line_end": 13,
+          "quote_status": "verbatim",
+          "exact_quote": "经济档 <50 / 平价 50–99 / 中档 100–199 / 高档 200–499 / 奢华 ≥500",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "partial_pending",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 2,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 41,
+          "line_end": 42,
+          "quote_status": "excerpt",
+          "exact_quote": "海鲜打冷/潮汕海鲜 · 中档 … ≥2",
+          "excerpt": "海鲜打冷/潮汕海鲜 · 中档 … ≥2",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 2,
+        "price_bands": [
+          "mid"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 41,
+          "line_end": 42,
+          "quote_status": "excerpt",
+          "exact_quote": "肥姚仔…潮人姐妹轩",
+          "excerpt": "肥姚仔…潮人姐妹轩",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": ""
+    },
+    {
+      "cell_id": "yueB_chaoshan_snack_sweet",
+      "city": "Shanghai",
+      "node_ids": [
+        "dish.snack",
+        "offer.sweet.dessert"
+      ],
+      "crossfacet": {
+        "price_tier": [
+          "economy",
+          "value"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 12,
+          "line_end": 13,
+          "quote_status": "verbatim",
+          "exact_quote": "经济档 <50 / 平价 50–99 / 中档 100–199 / 高档 200–499 / 奢华 ≥500",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "partial_pending",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 3,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 43,
+          "line_end": 45,
+          "quote_status": "excerpt",
+          "exact_quote": "潮汕小吃甜品 · 经济/平价 … ≥3",
+          "excerpt": "潮汕小吃甜品 · 经济/平价 … ≥3",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 3,
+        "price_bands": [
+          "economy",
+          "value"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 43,
+          "line_end": 45,
+          "quote_status": "excerpt",
+          "exact_quote": "汕鹤…汕心…然记",
+          "excerpt": "汕鹤…汕心…然记",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": ""
+    },
+    {
+      "cell_id": "yueB_chaoshan_fine_dining",
+      "city": "Shanghai",
+      "node_ids": [],
+      "crossfacet": {
+        "price_tier": [
+          "luxury"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 12,
+          "line_end": 13,
+          "quote_status": "verbatim",
+          "exact_quote": "经济档 <50 / 平价 50–99 / 中档 100–199 / 高档 200–499 / 奢华 ≥500",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "pending_review",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 2,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 46,
+          "line_end": 47,
+          "quote_status": "excerpt",
+          "exact_quote": "粤菜Fine Dining/高端（潮汕系） … ≥2",
+          "excerpt": "粤菜Fine Dining/高端（潮汕系） … ≥2",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 2,
+        "price_bands": [
+          "luxury"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 46,
+          "line_end": 47,
+          "quote_status": "excerpt",
+          "exact_quote": "菁禧荟…菁禧荟SELECTION",
+          "excerpt": "菁禧荟…菁禧荟SELECTION",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": "无fine-dining节点"
+    },
+    {
+      "cell_id": "yueB_minnan_chaoshan_cross",
+      "city": "Shanghai",
+      "node_ids": [],
+      "crossfacet": {
+        "price_tier": [
+          "value",
+          "mid"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 12,
+          "line_end": 13,
+          "quote_status": "verbatim",
+          "exact_quote": "经济档 <50 / 平价 50–99 / 中档 100–199 / 高档 200–499 / 奢华 ≥500",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "pending_review",
+      "expected_supply": {
+        "supply_tier": "scarce",
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "observed_historical_qualitative",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 2,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 48,
+          "line_end": 49,
+          "quote_status": "excerpt",
+          "exact_quote": "闽南/潮汕跨界小吃 … ≥2（供给稀缺）",
+          "excerpt": "闽南/潮汕跨界小吃 … ≥2（供给稀缺）",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 2,
+        "price_bands": [
+          "value",
+          "mid"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 48,
+          "line_end": 49,
+          "quote_status": "excerpt",
+          "exact_quote": "潮顺…夜阑静（交叉店，不独立成格）",
+          "excerpt": "潮顺…夜阑静（交叉店，不独立成格）",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": "跨界小吃无稳定节点；grid_B行73明示仅交叉店覆盖、不独立成格"
+    },
+    {
+      "cell_id": "yueB_chaoshan_snack_sweet_high",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.sweet.dessert"
+      ],
+      "crossfacet": {
+        "price_tier": [
+          "high",
+          "luxury"
+        ],
+        "price_basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 12,
+          "line_end": 13,
+          "quote_status": "verbatim",
+          "exact_quote": "经济档 <50 / 平价 50–99 / 中档 100–199 / 高档 200–499 / 奢华 ≥500",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "partial_pending",
+      "expected_supply": {
+        "supply_tier": "scarce",
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "observed_historical_qualitative",
+        "basis": {
+          "source_locator": "research/粤菜/grid_B.md",
+          "source_sha256": "97c5564964c1c7bf058ceeedf5ff4957b3263acd26a074184e3cbb1502b1d078",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": null,
+      "observed_historical": null,
+      "note": "grid_B行74：潮汕甜汤均平价快餐形态、无高端店，标供给稀缺；不造配额"
+    },
+    {
+      "cell_id": "min_fuzhou",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.fujian.fuzhou"
+      ],
+      "crossfacet": {
+        "price_tier": [
+          "value",
+          "mid",
+          "high",
+          "luxury"
+        ],
+        "price_basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 3,
+          "line_end": 4,
+          "quote_status": "verbatim",
+          "exact_quote": "轴3 档位（经济<50/平价50-99/中档100-199/高档200-499/奢华≥500）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "mapped",
+      "expected_supply": {
+        "supply_tier": "abundant",
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "observed_historical_qualitative",
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 3,
+        "comparator": ">=",
+        "price_band_min_count": 3,
+        "required_price_bands": [
+          "value",
+          "mid",
+          "high"
+        ],
+        "anchor_dish": "佛跳墙",
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 30,
+          "line_end": 30,
+          "quote_status": "verbatim",
+          "exact_quote": "配额：福州菜≥3家 ✅（4家）；覆盖高档/中档/平价 ✅；佛跳墙锚点在遇外滩系 ✅",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 4,
+        "price_bands": [
+          "value",
+          "mid",
+          "high",
+          "luxury"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 25,
+          "line_end": 30,
+          "quote_status": "verbatim",
+          "exact_quote": "遇外滩(BFC)/遇外滩SKYLINE/福見仁/甲东南",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": ""
+    },
+    {
+      "cell_id": "min_minnan",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.fujian.minnan"
+      ],
+      "crossfacet": {
+        "price_tier": [
+          "economy",
+          "value",
+          "mid"
+        ],
+        "price_basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 3,
+          "line_end": 4,
+          "quote_status": "verbatim",
+          "exact_quote": "轴3 档位（经济<50/平价50-99/中档100-199/高档200-499/奢华≥500）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "mapped",
+      "expected_supply": {
+        "supply_tier": "abundant",
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "observed_historical_qualitative",
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 5,
+        "comparator": ">=",
+        "price_band_min_count": 2,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 43,
+          "line_end": 43,
+          "quote_status": "excerpt",
+          "exact_quote": "配额：闽南菜≥5家覆盖≥2档 ✅（6家…）",
+          "excerpt": "配额：闽南菜≥5家覆盖≥2档 ✅（6家…）",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 6,
+        "price_bands": [
+          "economy",
+          "value",
+          "mid"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 36,
+          "line_end": 43,
+          "quote_status": "excerpt",
+          "exact_quote": "屿园…屿热…泉仔…荣先森…老吴…也红花",
+          "excerpt": "屿园…屿热…泉仔…荣先森…老吴…也红花",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": ""
+    },
+    {
+      "cell_id": "min_putian",
+      "city": "Shanghai",
+      "node_ids": [],
+      "crossfacet": {
+        "price_tier": [
+          "mid",
+          "high"
+        ],
+        "price_basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 3,
+          "line_end": 4,
+          "quote_status": "verbatim",
+          "exact_quote": "轴3 档位（经济<50/平价50-99/中档100-199/高档200-499/奢华≥500）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "pending_review",
+      "expected_supply": {
+        "supply_tier": "normal",
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "observed_historical_qualitative",
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 2,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 53,
+          "line_end": 53,
+          "quote_status": "verbatim",
+          "exact_quote": "配额：莆仙菜≥2家 ✅（3家）；覆盖中档/高档",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 3,
+        "price_bands": [
+          "mid",
+          "high"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 49,
+          "line_end": 53,
+          "quote_status": "excerpt",
+          "exact_quote": "莆味观…莆田餐厅PUTIEN…乾七道",
+          "excerpt": "莆味观…莆田餐厅PUTIEN…乾七道",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": "495 fujian下仅fuzhou/minnan/minxi，无莆仙(putian)节点，不硬挂"
+    },
+    {
+      "cell_id": "min_minbei",
+      "city": "Shanghai",
+      "node_ids": [],
+      "crossfacet": {
+        "price_tier": [
+          "mid"
+        ],
+        "price_basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 3,
+          "line_end": 4,
+          "quote_status": "verbatim",
+          "exact_quote": "轴3 档位（经济<50/平价50-99/中档100-199/高档200-499/奢华≥500）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "pending_review",
+      "expected_supply": {
+        "supply_tier": "scarce",
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "observed_historical_qualitative",
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 2,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 61,
+          "line_end": 62,
+          "quote_status": "excerpt",
+          "exact_quote": "配额：闽北菜≥2家并标注\"供给稀缺\" ⚠️（仅1家专门店…）",
+          "excerpt": "配额：闽北菜≥2家并标注\"供给稀缺\" ⚠️（仅1家专门店…）",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 1,
+        "price_bands": [
+          "mid"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 59,
+          "line_end": 62,
+          "quote_status": "verbatim",
+          "exact_quote": "鲜顺欧闽北私房菜（仅1家专门店）；乾七道兼营熏鹅不计专门店格",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": "无闽北(minbei)节点；minxi为闽西≠闽北，禁止错挂"
+    },
+    {
+      "cell_id": "min_fine_dining",
+      "city": "Shanghai",
+      "node_ids": [],
+      "crossfacet": {
+        "price_tier": [
+          "high",
+          "luxury"
+        ],
+        "price_basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 3,
+          "line_end": 4,
+          "quote_status": "verbatim",
+          "exact_quote": "轴3 档位（经济<50/平价50-99/中档100-199/高档200-499/奢华≥500）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "pending_review",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 1,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 71,
+          "line_end": 71,
+          "quote_status": "verbatim",
+          "exact_quote": "配额：闽菜FD≥1 ✅（2家同系分店）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 2,
+        "price_bands": [
+          "high",
+          "luxury"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 68,
+          "line_end": 71,
+          "quote_status": "verbatim",
+          "exact_quote": "遇外滩(BFC)/遇外滩SKYLINE",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": "无fine-dining节点"
+    },
+    {
+      "cell_id": "min_minnan_shacha_noodle",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.noodle",
+        "cuisine.china.fujian.minnan"
+      ],
+      "crossfacet": {
+        "price_tier": [
+          "economy",
+          "value",
+          "mid"
+        ],
+        "price_basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 3,
+          "line_end": 4,
+          "quote_status": "verbatim",
+          "exact_quote": "轴3 档位（经济<50/平价50-99/中档100-199/高档200-499/奢华≥500）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "partial_pending",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 5,
+        "comparator": ">=",
+        "price_band_min_count": 2,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 43,
+          "line_end": 43,
+          "quote_status": "verbatim",
+          "exact_quote": "配额：闽南菜≥5家覆盖≥2档",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 6,
+        "price_bands": [
+          "economy",
+          "value",
+          "mid"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 36,
+          "line_end": 43,
+          "quote_status": "verbatim",
+          "exact_quote": "沙茶面/海蛎煎/姜母鸭格",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": "沙茶面/海蛎煎/姜母鸭无独立dish节点，offer.specialty.noodle为近似"
+    },
+    {
+      "cell_id": "min_putian_lor_mee",
+      "city": "Shanghai",
+      "node_ids": [],
+      "crossfacet": {
+        "price_tier": [
+          "mid",
+          "high"
+        ],
+        "price_basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 3,
+          "line_end": 4,
+          "quote_status": "verbatim",
+          "exact_quote": "轴3 档位（经济<50/平价50-99/中档100-199/高档200-499/奢华≥500）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "pending_review",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 2,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 53,
+          "line_end": 53,
+          "quote_status": "verbatim",
+          "exact_quote": "配额：莆仙菜≥2家",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 3,
+        "price_bands": [
+          "mid",
+          "high"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 49,
+          "line_end": 53,
+          "quote_status": "verbatim",
+          "exact_quote": "莆田卤面/仙游菜",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": "无莆仙菜节点"
+    },
+    {
+      "cell_id": "min_minbei_smoked",
+      "city": "Shanghai",
+      "node_ids": [],
+      "crossfacet": {
+        "price_tier": [
+          "mid"
+        ],
+        "price_basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 3,
+          "line_end": 4,
+          "quote_status": "verbatim",
+          "exact_quote": "轴3 档位（经济<50/平价50-99/中档100-199/高档200-499/奢华≥500）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "pending_review",
+      "expected_supply": {
+        "supply_tier": "scarce",
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "observed_historical_qualitative",
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 2,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 61,
+          "line_end": 62,
+          "quote_status": "verbatim",
+          "exact_quote": "闽北菜≥2家并标注供给稀缺",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 1,
+        "price_bands": [
+          "mid"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 59,
+          "line_end": 62,
+          "quote_status": "verbatim",
+          "exact_quote": "鲜顺欧（闽北山珍熏味，唯一专门店）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": "无闽北节点"
+    },
+    {
+      "cell_id": "min_minnan_snack_sweet",
+      "city": "Shanghai",
+      "node_ids": [
+        "dish.snack",
+        "offer.sweet.dessert"
+      ],
+      "crossfacet": {
+        "price_tier": [
+          "economy",
+          "value"
+        ],
+        "price_basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 3,
+          "line_end": 4,
+          "quote_status": "verbatim",
+          "exact_quote": "轴3 档位（经济<50/平价50-99/中档100-199/高档200-499/奢华≥500）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        },
+        "price_facet_is_tree_node": false
+      },
+      "mapping_status": "partial_pending",
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_operating_entities",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 1,
+          "line_end": 6,
+          "quote_status": "unknown",
+          "exact_quote": null,
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 2,
+        "comparator": ">=",
+        "price_band_min_count": 1,
+        "required_price_bands": null,
+        "anchor_dish": null,
+        "candidate_pool_multiplier": 2,
+        "unit": "verified_operating_entities",
+        "policy_status": "candidate_pending_owner_adoption",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 81,
+          "line_end": 81,
+          "quote_status": "verbatim",
+          "exact_quote": "配额：闽南小吃格≥2 ✅（3家）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 3,
+        "price_bands": [
+          "economy",
+          "value"
+        ],
+        "count_type": "historical_curated_shops_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "historical_batch_2026-09-23",
+        "basis": {
+          "source_locator": "research/闽菜/grid.md",
+          "source_sha256": "32a501fa9f8b006284e6b92647126f014d06e5abee31c190663bbb21215472cf",
+          "line_start": 77,
+          "line_end": 81,
+          "quote_status": "excerpt",
+          "exact_quote": "屿园…泉仔…屿热",
+          "excerpt": "屿园…泉仔…屿热",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": ""
+    },
+    {
+      "cell_id": "cat_standard_wet_market",
+      "city": "Shanghai",
+      "node_ids": [],
+      "mapping_status": "pending_review",
+      "crossfacet": {
+        "category": "菜市场/标准化农贸市场",
+        "price_tier": [],
+        "price_facet_is_tree_node": false,
+        "price_basis": {
+          "source_locator": "research/category/菜市场/04_source_plan.md",
+          "source_sha256": "24d7243333492cfbd45aad4295fcf66cb85f85e062eda8e095c67598250a6dec",
+          "line_start": 1,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "菜市场 · 源覆盖矩阵（Source Plan）",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "official_registered_markets",
+        "status": "unknown",
+        "basis": {
+          "source_locator": "research/category/菜市场/04_source_plan.md",
+          "source_sha256": "24d7243333492cfbd45aad4295fcf66cb85f85e062eda8e095c67598250a6dec",
+          "line_start": 10,
+          "line_end": 10,
+          "quote_status": "excerpt",
+          "exact_quote": "《2025 升级改造标准化菜市场名单》(93家)… 全量在册点（名称+地址）",
+          "excerpt": "《2025 升级改造标准化菜市场名单》(93家)… 全量在册点（名称+地址）",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "target_quota": {
+        "count": 93,
+        "comparator": "official_ledger_recall",
+        "price_band_min_count": null,
+        "candidate_pool_multiplier": null,
+        "unit": "official_registered_markets",
+        "policy_status": "official_ledger_observed_historical",
+        "approved": false,
+        "basis": {
+          "source_locator": "research/category/菜市场/04_source_plan.md",
+          "source_sha256": "24d7243333492cfbd45aad4295fcf66cb85f85e062eda8e095c67598250a6dec",
+          "line_start": 20,
+          "line_end": 20,
+          "quote_status": "verbatim",
+          "exact_quote": "标准化农贸市场 | 商务委名单 | （官方底册全量） | 93 | market_ledger.json | 完成",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "observed_historical": {
+        "count": 93,
+        "price_bands": [],
+        "count_type": "official_ledger_entries_recall_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "official_ledger_recall_2026_09",
+        "basis": {
+          "source_locator": "research/category/菜市场/04_source_plan.md",
+          "source_sha256": "24d7243333492cfbd45aad4295fcf66cb85f85e062eda8e095c67598250a6dec",
+          "line_start": 34,
+          "line_end": 34,
+          "quote_status": "verbatim",
+          "exact_quote": "权威底册（2025 名单）全量召回 93/93",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": "format.place.stall为市场内档口，非整座菜市场；整体品类无稳定节点。93为底册召回数非市场供给普查"
+    },
+    {
+      "cell_id": "cat_market_stall",
+      "city": "Shanghai",
+      "node_ids": [
+        "format.place.stall"
+      ],
+      "mapping_status": "mapped",
+      "crossfacet": {
+        "category": "菜市场·特色摊位",
+        "price_tier": [],
+        "price_facet_is_tree_node": false,
+        "price_basis": {
+          "source_locator": "research/category/菜市场/04_source_plan.md",
+          "source_sha256": "24d7243333492cfbd45aad4295fcf66cb85f85e062eda8e095c67598250a6dec",
+          "line_start": 1,
+          "line_end": 5,
+          "quote_status": "verbatim",
+          "exact_quote": "菜市场 · 源覆盖矩阵",
+          "excerpt": null,
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "expected_supply": {
+        "supply_tier": null,
+        "value": null,
+        "unit": "verified_stalls",
+        "status": "unknown",
+        "basis": null
+      },
+      "target_quota": null,
+      "observed_historical": {
+        "count": null,
+        "price_bands": [],
+        "count_type": "sample_only_NOT_verified_operating_entities",
+        "verified_operating_entities": null,
+        "attribution": "sample_only_2026_09",
+        "basis": {
+          "source_locator": "research/category/菜市场/04_source_plan.md",
+          "source_sha256": "24d7243333492cfbd45aad4295fcf66cb85f85e062eda8e095c67598250a6dec",
+          "line_start": 24,
+          "line_end": 24,
+          "quote_status": "excerpt",
+          "exact_quote": "特色摊位 | 媒体/UGC | 现制豆制品/爆鱼/四大金刚 | 采样 | … | 采样完成",
+          "excerpt": "特色摊位 | 媒体/UGC | 现制豆制品/爆鱼/四大金刚 | 采样 | … | 采样完成",
+          "observed_at": "2026-09-23",
+          "attribution": "historical_batch",
+          "is_current_market_fact": false
+        }
+      },
+      "note": "只采样，未饱和；source_plan行38：未饱和格不出精选，不硬凑"
+    }
+  ]
+}

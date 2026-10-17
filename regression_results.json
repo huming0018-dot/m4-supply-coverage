@@ -1,0 +1,542 @@
+{
+  "oracle_version": "v2",
+  "summary": "36/36 passed",
+  "failures": [],
+  "note": "v2 frozen oracle. v1 oracle and v1 failures preserved unchanged.",
+  "results": [
+    {
+      "case": "C01_dedup_same_url",
+      "pass": true,
+      "expect": {
+        "materials": 1,
+        "independent_posts": 0,
+        "verified_operating_entities": 0
+      },
+      "got": {
+        "materials": 1,
+        "independent_posts": 0,
+        "verified_operating_entities": 0
+      },
+      "diffs": [],
+      "basis": "v2: crowd_diner 非白名单无身份依据 -> 0 post; 无 verified_merchant -> 0 实体"
+    },
+    {
+      "case": "C02_dedup_same_content_hash",
+      "pass": true,
+      "expect": {
+        "materials": 1,
+        "independent_posts": 0
+      },
+      "got": {
+        "materials": 1,
+        "independent_posts": 0
+      },
+      "diffs": [],
+      "basis": "v2: 同 content_hash 归组1；admission 非白名单 -> 0 post"
+    },
+    {
+      "case": "C03_roles_not_mixed",
+      "pass": true,
+      "expect": {
+        "materials": 3,
+        "independent_posts": 0,
+        "verified_operating_entities": 0
+      },
+      "got": {
+        "materials": 3,
+        "independent_posts": 0,
+        "verified_operating_entities": 0
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C04_unknown_not_zero",
+      "pass": true,
+      "expect": {
+        "status": "unknown",
+        "verified_operating_entities": null,
+        "quota_verdict": "unassessed_expected_supply_unknown"
+      },
+      "got": {
+        "status": "unknown",
+        "verified_operating_entities": null,
+        "quota_verdict": "unassessed_expected_supply_unknown"
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C05_negation_neighbor",
+      "pass": true,
+      "expect": {
+        "status": "unknown",
+        "verified_operating_entities": null,
+        "dropped_count": 2,
+        "dropped_reason": "negation_or_neighbor_cannot_verify"
+      },
+      "got": {
+        "status": "unknown",
+        "verified_operating_entities": null,
+        "dropped_count": 2,
+        "dropped_reason": "negation_or_neighbor_cannot_verify"
+      },
+      "diffs": [],
+      "basis": "v2: 全部拒后无观察 -> unknown；verified=null 不伪0"
+    },
+    {
+      "case": "C06_cross_domain_rejected",
+      "pass": true,
+      "expect": {
+        "dropped_reason": "cell_id_not_in_policy"
+      },
+      "got": {
+        "dropped_reason": "cell_id_not_in_policy"
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C07_ocr_low_confidence",
+      "pass": true,
+      "expect": {
+        "status": "observed",
+        "materials": 1,
+        "verified_operating_entities": 0
+      },
+      "got": {
+        "status": "observed",
+        "materials": 1,
+        "verified_operating_entities": 0
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C08_quota_no_basis_refused",
+      "pass": true,
+      "expect": {
+        "plan_blocker": "no_quota_basis",
+        "total": 0
+      },
+      "got": {
+        "plan_blocker": "no_quota_basis",
+        "total": 0
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C09_pinned_pack_version",
+      "pass": true,
+      "expect": {
+        "same": true,
+        "different": true
+      },
+      "got": {
+        "same": true,
+        "different": true
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C10_quota_keeps_material_count",
+      "pass": true,
+      "expect": {
+        "materials": 5,
+        "verified_operating_entities": 1,
+        "status": "observed"
+      },
+      "got": {
+        "materials": 5,
+        "verified_operating_entities": 1,
+        "status": "observed"
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C11_candidate_target_never_approved",
+      "pass": true,
+      "expect": {
+        "quota_verdict": "unassessed_expected_supply_unknown",
+        "approved": false
+      },
+      "got": {
+        "quota_verdict": "unassessed_expected_supply_unknown",
+        "approved": false
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C12_minbei_no_node",
+      "pass": true,
+      "expect": {
+        "mapping": "pending_review",
+        "status": "unassessed",
+        "blocker": "blocked_pending_review"
+      },
+      "got": {
+        "mapping": "pending_review",
+        "status": "unassessed",
+        "blocker": "blocked_pending_review"
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C13_fuzhou_three_bands_anchor",
+      "pass": true,
+      "expect": {
+        "count": 3,
+        "bands": [
+          "value",
+          "mid",
+          "high"
+        ],
+        "anchor": "佛跳墙"
+      },
+      "got": {
+        "count": 3,
+        "bands": [
+          "value",
+          "mid",
+          "high"
+        ],
+        "anchor": "佛跳墙"
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C14_idempotent_plan",
+      "pass": true,
+      "expect": {
+        "idempotent": true
+      },
+      "got": {
+        "idempotent": true
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C15_no_budget_still_planned",
+      "pass": true,
+      "expect": {
+        "total_positive": true,
+        "all_status": "PLANNED_NOT_SUBMITTED",
+        "budget_cap": null
+      },
+      "got": {
+        "total_positive": true,
+        "all_status": "PLANNED_NOT_SUBMITTED",
+        "budget_cap": null
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C16_budget_truncates",
+      "pass": true,
+      "expect": {
+        "truncated": true,
+        "reasons_contains": "budget_exhausted"
+      },
+      "got": {
+        "truncated": true,
+        "reasons_contains": "budget_exhausted"
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C17_attempted_failed",
+      "pass": true,
+      "expect": {
+        "status": "attempted_failed"
+      },
+      "got": {
+        "status": "attempted_failed"
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C18_diner_missing_admission",
+      "pass": true,
+      "expect": {
+        "independent_posts": 0
+      },
+      "got": {
+        "independent_posts": 0
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C19_diner_brand_new_unrecognized",
+      "pass": true,
+      "expect": {
+        "independent_posts": 0
+      },
+      "got": {
+        "independent_posts": 0
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C20_diner_verified_with_identity",
+      "pass": true,
+      "expect": {
+        "independent_posts": 1,
+        "verified_operating_entities": 1
+      },
+      "got": {
+        "independent_posts": 1,
+        "verified_operating_entities": 1
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C21_partial_mapping_blocked",
+      "pass": true,
+      "expect": {
+        "blocker": "blocked_partial_mapping"
+      },
+      "got": {
+        "blocker": "blocked_partial_mapping"
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C22_fuzhou_no_anchor_below",
+      "pass": true,
+      "expect": {
+        "verdict": "below_candidate_target",
+        "missing_anchor": true
+      },
+      "got": {
+        "verdict": "below_candidate_target",
+        "missing_anchor": true
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C23_fuzhou_anchor_met",
+      "pass": true,
+      "expect": {
+        "verdict": "meets_candidate_target"
+      },
+      "got": {
+        "verdict": "meets_candidate_target"
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C24_minnan_single_band_below",
+      "pass": true,
+      "expect": {
+        "verdict": "below_candidate_target",
+        "bands_ok": false
+      },
+      "got": {
+        "verdict": "below_candidate_target",
+        "bands_ok": false
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C25_approved_gate_full",
+      "pass": true,
+      "expect": {
+        "satisfied": "met",
+        "unsatisfied": "below"
+      },
+      "got": {
+        "satisfied": "met",
+        "unsatisfied": "below"
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C26_quote_status_not_verbatim",
+      "pass": true,
+      "expect": {
+        "placeholder": "unknown",
+        "ellipsis": "excerpt",
+        "source_sha_kept": true
+      },
+      "got": {
+        "placeholder": "unknown",
+        "ellipsis": "excerpt",
+        "source_sha_kept": true
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C27_unobserved_deficit_null",
+      "pass": true,
+      "expect": {
+        "verified_entities_observed": null,
+        "deficit": null
+      },
+      "got": {
+        "verified_entities_observed": null,
+        "deficit": null
+      },
+      "diffs": [],
+      "basis": "v2: 批次空跑未观察，observed/deficit 均 null，不用 0/3 冒差额"
+    },
+    {
+      "case": "C28_unknown_verified_null",
+      "pass": true,
+      "expect": {
+        "status": "unknown",
+        "verified_operating_entities": null
+      },
+      "got": {
+        "status": "unknown",
+        "verified_operating_entities": null
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C29_unknown_plan_deficit_null",
+      "pass": true,
+      "expect": {
+        "verified_entities_observed": null,
+        "deficit": null,
+        "coverage_status": "unknown",
+        "ranking_assumption": "observation_unknown_deficit_null_not_zero"
+      },
+      "got": {
+        "verified_entities_observed": null,
+        "deficit": null,
+        "coverage_status": "unknown",
+        "ranking_assumption": "observation_unknown_deficit_null_not_zero"
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C30_bands_and_constraint",
+      "pass": true,
+      "expect": {
+        "verdict": "below_candidate_target",
+        "bands_ok": false,
+        "required_bands_ok": true,
+        "min_bands_ok": false
+      },
+      "got": {
+        "verdict": "below_candidate_target",
+        "bands_ok": false,
+        "required_bands_ok": true,
+        "min_bands_ok": false
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C31_task_hashes_and_refs",
+      "pass": true,
+      "expect": {
+        "hashes_present": true,
+        "empty_vs_three_isolated": true,
+        "observed_refs_count": 3
+      },
+      "got": {
+        "hashes_present": true,
+        "empty_vs_three_isolated": true,
+        "observed_refs_count": 3
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C32_invalid_request_rejected",
+      "pass": true,
+      "expect": {
+        "rejects_bool_budget": true,
+        "rejects_nan_budget": true,
+        "rejects_negative_budget": true,
+        "rejects_string_budget": true,
+        "rejects_unknown_status": true,
+        "rejects_bad_task_limit": true
+      },
+      "got": {
+        "rejects_bool_budget": true,
+        "rejects_nan_budget": true,
+        "rejects_negative_budget": true,
+        "rejects_string_budget": true,
+        "rejects_unknown_status": true,
+        "rejects_bad_task_limit": true
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C33_idempotent_isolated",
+      "pass": true,
+      "expect": {
+        "same_input_same_ids": true,
+        "different_input_isolated": true
+      },
+      "got": {
+        "same_input_same_ids": true,
+        "different_input_isolated": true
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C34_oracle_negative_control",
+      "pass": true,
+      "expect": {
+        "mutated_expectation_fails": true
+      },
+      "got": {
+        "mutated_expectation_fails": true
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C35_invalid_attempt_rejected",
+      "pass": true,
+      "expect": {
+        "invalid_attempt_rejected": true
+      },
+      "got": {
+        "invalid_attempt_rejected": true
+      },
+      "diffs": [],
+      "basis": ""
+    },
+    {
+      "case": "C36_ods_raw_ref_contract",
+      "pass": true,
+      "expect": {
+        "raw_sourcerefs_versionless_ok": true,
+        "ods_noninteger_version_dropped": true
+      },
+      "got": {
+        "raw_sourcerefs_versionless_ok": true,
+        "ods_noninteger_version_dropped": true
+      },
+      "diffs": [],
+      "basis": ""
+    }
+  ]
+}

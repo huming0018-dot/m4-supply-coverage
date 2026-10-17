@@ -1,0 +1,4048 @@
+{
+  "schema": "m4.coverage.source_plan_matrix/v1",
+  "disclaimer": "PLANNING ARTIFACT ONLY. Produces PLANNED_NOT_SUBMITTED tasks; no collection/outbox/scheduling.",
+  "roles": [
+    {
+      "source_type": "official_ledger",
+      "order": 1,
+      "basis": {
+        "source_locator": "research/category/菜市场/04_source_plan.md",
+        "source_sha256": "24d7243333492cfbd45aad4295fcf66cb85f85e062eda8e095c67598250a6dec",
+        "line_start": 10,
+        "line_end": 10,
+        "quote_status": "excerpt",
+        "exact_quote": "官方/权威底册 | 上海市商务委…《2025 升级改造标准化菜市场名单》(93家)…",
+        "excerpt": "官方/权威底册 | 上海市商务委…《2025 升级改造标准化菜市场名单》(93家)…",
+        "observed_at": "2026-09-23",
+        "attribution": "historical_batch",
+        "is_current_market_fact": false
+      }
+    },
+    {
+      "source_type": "gov_open",
+      "order": 2,
+      "basis": {
+        "source_locator": "research/category/菜市场/04_source_plan.md",
+        "source_sha256": "24d7243333492cfbd45aad4295fcf66cb85f85e062eda8e095c67598250a6dec",
+        "line_start": 14,
+        "line_end": 14,
+        "quote_status": "excerpt",
+        "exact_quote": "政务公开 | 各区经委/商务委子站 | 区级菜篮子、生态市集…",
+        "excerpt": "政务公开 | 各区经委/商务委子站 | 区级菜篮子、生态市集…",
+        "observed_at": "2026-09-23",
+        "attribution": "historical_batch",
+        "is_current_market_fact": false
+      }
+    },
+    {
+      "source_type": "map_poi",
+      "order": 3,
+      "basis": {
+        "source_locator": "research/category/菜市场/04_source_plan.md",
+        "source_sha256": "24d7243333492cfbd45aad4295fcf66cb85f85e062eda8e095c67598250a6dec",
+        "line_start": 12,
+        "line_end": 12,
+        "quote_status": "verbatim",
+        "exact_quote": "地图 POI | 高德/腾讯/百度（免费额度） | 坐标、电话、营业时间、分区 | 配额用尽即停",
+        "excerpt": null,
+        "observed_at": "2026-09-23",
+        "attribution": "historical_batch",
+        "is_current_market_fact": false
+      }
+    },
+    {
+      "source_type": "media_vertical",
+      "order": 4,
+      "basis": {
+        "source_locator": "research/category/菜市场/04_source_plan.md",
+        "source_sha256": "24d7243333492cfbd45aad4295fcf66cb85f85e062eda8e095c67598250a6dec",
+        "line_start": 13,
+        "line_end": 13,
+        "quote_status": "excerpt",
+        "exact_quote": "媒体/垂直 | 上观、澎湃、本地宝、区政府民生稿…",
+        "excerpt": "媒体/垂直 | 上观、澎湃、本地宝、区政府民生稿…",
+        "observed_at": "2026-09-23",
+        "attribution": "historical_batch",
+        "is_current_market_fact": false
+      }
+    },
+    {
+      "source_type": "ugc_community",
+      "order": 5,
+      "basis": {
+        "source_locator": "research/category/菜市场/04_source_plan.md",
+        "source_sha256": "24d7243333492cfbd45aad4295fcf66cb85f85e062eda8e095c67598250a6dec",
+        "line_start": 11,
+        "line_end": 11,
+        "quote_status": "excerpt",
+        "exact_quote": "UGC 社区 | 小红书/抖音… 不登录、不硬刷",
+        "excerpt": "UGC 社区 | 小红书/抖音… 不登录、不硬刷",
+        "observed_at": "2026-09-23",
+        "attribution": "historical_batch",
+        "is_current_market_fact": false
+      }
+    }
+  ],
+  "rows": [
+    {
+      "cell_id": "yueA_cantonese_meal",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.cantonese"
+      ],
+      "crossfacet_price": [
+        "mid",
+        "high"
+      ],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "yueA_cantonese_meal",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.cantonese"
+      ],
+      "crossfacet_price": [
+        "mid",
+        "high"
+      ],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueA_cantonese_meal",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.cantonese"
+      ],
+      "crossfacet_price": [
+        "mid",
+        "high"
+      ],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueA_cantonese_meal",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.cantonese"
+      ],
+      "crossfacet_price": [
+        "mid",
+        "high"
+      ],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueA_cantonese_meal",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.cantonese"
+      ],
+      "crossfacet_price": [
+        "mid",
+        "high"
+      ],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    },
+    {
+      "cell_id": "yueA_cantonese_seafood",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.seafood",
+        "cuisine.china.guangdong.cantonese"
+      ],
+      "crossfacet_price": [
+        "high"
+      ],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "yueA_cantonese_seafood",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.seafood",
+        "cuisine.china.guangdong.cantonese"
+      ],
+      "crossfacet_price": [
+        "high"
+      ],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueA_cantonese_seafood",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.seafood",
+        "cuisine.china.guangdong.cantonese"
+      ],
+      "crossfacet_price": [
+        "high"
+      ],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueA_cantonese_seafood",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.seafood",
+        "cuisine.china.guangdong.cantonese"
+      ],
+      "crossfacet_price": [
+        "high"
+      ],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueA_cantonese_seafood",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.seafood",
+        "cuisine.china.guangdong.cantonese"
+      ],
+      "crossfacet_price": [
+        "high"
+      ],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    },
+    {
+      "cell_id": "yueA_siu_lap",
+      "city": "Shanghai",
+      "node_ids": [],
+      "source_type": null,
+      "status": "blocked_pending_review",
+      "reason": "no stable 495 node mapping; cannot generate executable query until taxonomy mapping resolved",
+      "target_fields": [],
+      "evidence_required": [],
+      "stop_conditions": []
+    },
+    {
+      "cell_id": "yueA_shunde",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.shunde"
+      ],
+      "crossfacet_price": [
+        "mid",
+        "high"
+      ],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "yueA_shunde",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.shunde"
+      ],
+      "crossfacet_price": [
+        "mid",
+        "high"
+      ],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueA_shunde",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.shunde"
+      ],
+      "crossfacet_price": [
+        "mid",
+        "high"
+      ],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueA_shunde",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.shunde"
+      ],
+      "crossfacet_price": [
+        "mid",
+        "high"
+      ],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueA_shunde",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.shunde"
+      ],
+      "crossfacet_price": [
+        "mid",
+        "high"
+      ],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    },
+    {
+      "cell_id": "yueA_hakka",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.hakka"
+      ],
+      "crossfacet_price": [
+        "value",
+        "mid"
+      ],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "yueA_hakka",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.hakka"
+      ],
+      "crossfacet_price": [
+        "value",
+        "mid"
+      ],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueA_hakka",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.hakka"
+      ],
+      "crossfacet_price": [
+        "value",
+        "mid"
+      ],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueA_hakka",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.hakka"
+      ],
+      "crossfacet_price": [
+        "value",
+        "mid"
+      ],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueA_hakka",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.hakka"
+      ],
+      "crossfacet_price": [
+        "value",
+        "mid"
+      ],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    },
+    {
+      "cell_id": "yueA_cha_chaan_teng",
+      "city": "Shanghai",
+      "node_ids": [],
+      "source_type": null,
+      "status": "blocked_pending_review",
+      "reason": "no stable 495 node mapping; cannot generate executable query until taxonomy mapping resolved",
+      "target_fields": [],
+      "evidence_required": [],
+      "stop_conditions": []
+    },
+    {
+      "cell_id": "yueA_dim_sum",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.snack.dim_sum"
+      ],
+      "crossfacet_price": [
+        "value",
+        "mid",
+        "high"
+      ],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "yueA_dim_sum",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.snack.dim_sum"
+      ],
+      "crossfacet_price": [
+        "value",
+        "mid",
+        "high"
+      ],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueA_dim_sum",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.snack.dim_sum"
+      ],
+      "crossfacet_price": [
+        "value",
+        "mid",
+        "high"
+      ],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueA_dim_sum",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.snack.dim_sum"
+      ],
+      "crossfacet_price": [
+        "value",
+        "mid",
+        "high"
+      ],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueA_dim_sum",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.snack.dim_sum"
+      ],
+      "crossfacet_price": [
+        "value",
+        "mid",
+        "high"
+      ],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    },
+    {
+      "cell_id": "yueA_congee_noodle_rice",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.noodle",
+        "offer.specialty.rice"
+      ],
+      "crossfacet_price": [
+        "value",
+        "mid"
+      ],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "yueA_congee_noodle_rice",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.noodle",
+        "offer.specialty.rice"
+      ],
+      "crossfacet_price": [
+        "value",
+        "mid"
+      ],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueA_congee_noodle_rice",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.noodle",
+        "offer.specialty.rice"
+      ],
+      "crossfacet_price": [
+        "value",
+        "mid"
+      ],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueA_congee_noodle_rice",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.noodle",
+        "offer.specialty.rice"
+      ],
+      "crossfacet_price": [
+        "value",
+        "mid"
+      ],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueA_congee_noodle_rice",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.noodle",
+        "offer.specialty.rice"
+      ],
+      "crossfacet_price": [
+        "value",
+        "mid"
+      ],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    },
+    {
+      "cell_id": "yueA_jue_jue_claypot",
+      "city": "Shanghai",
+      "node_ids": [],
+      "source_type": null,
+      "status": "blocked_pending_review",
+      "reason": "no stable 495 node mapping; cannot generate executable query until taxonomy mapping resolved",
+      "target_fields": [],
+      "evidence_required": [],
+      "stop_conditions": []
+    },
+    {
+      "cell_id": "yueA_fine_dining",
+      "city": "Shanghai",
+      "node_ids": [],
+      "source_type": null,
+      "status": "blocked_pending_review",
+      "reason": "no stable 495 node mapping; cannot generate executable query until taxonomy mapping resolved",
+      "target_fields": [],
+      "evidence_required": [],
+      "stop_conditions": []
+    },
+    {
+      "cell_id": "yueB_chaoshan_meal_value",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "value"
+      ],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "yueB_chaoshan_meal_value",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "value"
+      ],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_chaoshan_meal_value",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "value"
+      ],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_chaoshan_meal_value",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "value"
+      ],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_chaoshan_meal_value",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "value"
+      ],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    },
+    {
+      "cell_id": "yueB_chaoshan_meal_mid",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "yueB_chaoshan_meal_mid",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_chaoshan_meal_mid",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_chaoshan_meal_mid",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_chaoshan_meal_mid",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    },
+    {
+      "cell_id": "yueB_chaoshan_meal_high",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "high"
+      ],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "yueB_chaoshan_meal_high",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "high"
+      ],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_chaoshan_meal_high",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "high"
+      ],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_chaoshan_meal_high",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "high"
+      ],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_chaoshan_meal_high",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "high"
+      ],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    },
+    {
+      "cell_id": "yueB_beef_hotpot_value",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.hotpot",
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "value"
+      ],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "yueB_beef_hotpot_value",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.hotpot",
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "value"
+      ],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_beef_hotpot_value",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.hotpot",
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "value"
+      ],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_beef_hotpot_value",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.hotpot",
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "value"
+      ],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_beef_hotpot_value",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.hotpot",
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "value"
+      ],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    },
+    {
+      "cell_id": "yueB_beef_hotpot_mid",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.hotpot",
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "yueB_beef_hotpot_mid",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.hotpot",
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_beef_hotpot_mid",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.hotpot",
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_beef_hotpot_mid",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.hotpot",
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_beef_hotpot_mid",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.hotpot",
+        "cuisine.china.guangdong.chaoshan"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    },
+    {
+      "cell_id": "yueB_da_leng_sheng_yan",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.snack.braised"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "yueB_da_leng_sheng_yan",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.snack.braised"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_da_leng_sheng_yan",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.snack.braised"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_da_leng_sheng_yan",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.snack.braised"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_da_leng_sheng_yan",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.snack.braised"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    },
+    {
+      "cell_id": "yueB_congee_guotiao_value",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.rice",
+        "dish.staple.rice_noodle"
+      ],
+      "crossfacet_price": [
+        "value"
+      ],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "yueB_congee_guotiao_value",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.rice",
+        "dish.staple.rice_noodle"
+      ],
+      "crossfacet_price": [
+        "value"
+      ],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_congee_guotiao_value",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.rice",
+        "dish.staple.rice_noodle"
+      ],
+      "crossfacet_price": [
+        "value"
+      ],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_congee_guotiao_value",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.rice",
+        "dish.staple.rice_noodle"
+      ],
+      "crossfacet_price": [
+        "value"
+      ],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_congee_guotiao_value",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.rice",
+        "dish.staple.rice_noodle"
+      ],
+      "crossfacet_price": [
+        "value"
+      ],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    },
+    {
+      "cell_id": "yueB_congee_guotiao_mid",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.rice"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "yueB_congee_guotiao_mid",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.rice"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_congee_guotiao_mid",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.rice"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_congee_guotiao_mid",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.rice"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_congee_guotiao_mid",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.rice"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    },
+    {
+      "cell_id": "yueB_seafood_da_leng",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.seafood"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "yueB_seafood_da_leng",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.seafood"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_seafood_da_leng",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.seafood"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_seafood_da_leng",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.seafood"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_seafood_da_leng",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.seafood"
+      ],
+      "crossfacet_price": [
+        "mid"
+      ],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    },
+    {
+      "cell_id": "yueB_chaoshan_snack_sweet",
+      "city": "Shanghai",
+      "node_ids": [
+        "dish.snack",
+        "offer.sweet.dessert"
+      ],
+      "crossfacet_price": [
+        "economy",
+        "value"
+      ],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "yueB_chaoshan_snack_sweet",
+      "city": "Shanghai",
+      "node_ids": [
+        "dish.snack",
+        "offer.sweet.dessert"
+      ],
+      "crossfacet_price": [
+        "economy",
+        "value"
+      ],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_chaoshan_snack_sweet",
+      "city": "Shanghai",
+      "node_ids": [
+        "dish.snack",
+        "offer.sweet.dessert"
+      ],
+      "crossfacet_price": [
+        "economy",
+        "value"
+      ],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_chaoshan_snack_sweet",
+      "city": "Shanghai",
+      "node_ids": [
+        "dish.snack",
+        "offer.sweet.dessert"
+      ],
+      "crossfacet_price": [
+        "economy",
+        "value"
+      ],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_chaoshan_snack_sweet",
+      "city": "Shanghai",
+      "node_ids": [
+        "dish.snack",
+        "offer.sweet.dessert"
+      ],
+      "crossfacet_price": [
+        "economy",
+        "value"
+      ],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    },
+    {
+      "cell_id": "yueB_chaoshan_fine_dining",
+      "city": "Shanghai",
+      "node_ids": [],
+      "source_type": null,
+      "status": "blocked_pending_review",
+      "reason": "no stable 495 node mapping; cannot generate executable query until taxonomy mapping resolved",
+      "target_fields": [],
+      "evidence_required": [],
+      "stop_conditions": []
+    },
+    {
+      "cell_id": "yueB_minnan_chaoshan_cross",
+      "city": "Shanghai",
+      "node_ids": [],
+      "source_type": null,
+      "status": "blocked_pending_review",
+      "reason": "no stable 495 node mapping; cannot generate executable query until taxonomy mapping resolved",
+      "target_fields": [],
+      "evidence_required": [],
+      "stop_conditions": []
+    },
+    {
+      "cell_id": "yueB_chaoshan_snack_sweet_high",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.sweet.dessert"
+      ],
+      "crossfacet_price": [
+        "high",
+        "luxury"
+      ],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "yueB_chaoshan_snack_sweet_high",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.sweet.dessert"
+      ],
+      "crossfacet_price": [
+        "high",
+        "luxury"
+      ],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_chaoshan_snack_sweet_high",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.sweet.dessert"
+      ],
+      "crossfacet_price": [
+        "high",
+        "luxury"
+      ],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_chaoshan_snack_sweet_high",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.sweet.dessert"
+      ],
+      "crossfacet_price": [
+        "high",
+        "luxury"
+      ],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "yueB_chaoshan_snack_sweet_high",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.sweet.dessert"
+      ],
+      "crossfacet_price": [
+        "high",
+        "luxury"
+      ],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    },
+    {
+      "cell_id": "min_fuzhou",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.fujian.fuzhou"
+      ],
+      "crossfacet_price": [
+        "value",
+        "mid",
+        "high",
+        "luxury"
+      ],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "min_fuzhou",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.fujian.fuzhou"
+      ],
+      "crossfacet_price": [
+        "value",
+        "mid",
+        "high",
+        "luxury"
+      ],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "min_fuzhou",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.fujian.fuzhou"
+      ],
+      "crossfacet_price": [
+        "value",
+        "mid",
+        "high",
+        "luxury"
+      ],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "min_fuzhou",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.fujian.fuzhou"
+      ],
+      "crossfacet_price": [
+        "value",
+        "mid",
+        "high",
+        "luxury"
+      ],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "min_fuzhou",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.fujian.fuzhou"
+      ],
+      "crossfacet_price": [
+        "value",
+        "mid",
+        "high",
+        "luxury"
+      ],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    },
+    {
+      "cell_id": "min_minnan",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.fujian.minnan"
+      ],
+      "crossfacet_price": [
+        "economy",
+        "value",
+        "mid"
+      ],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "min_minnan",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.fujian.minnan"
+      ],
+      "crossfacet_price": [
+        "economy",
+        "value",
+        "mid"
+      ],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "min_minnan",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.fujian.minnan"
+      ],
+      "crossfacet_price": [
+        "economy",
+        "value",
+        "mid"
+      ],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "min_minnan",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.fujian.minnan"
+      ],
+      "crossfacet_price": [
+        "economy",
+        "value",
+        "mid"
+      ],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "min_minnan",
+      "city": "Shanghai",
+      "node_ids": [
+        "cuisine.china.fujian.minnan"
+      ],
+      "crossfacet_price": [
+        "economy",
+        "value",
+        "mid"
+      ],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    },
+    {
+      "cell_id": "min_putian",
+      "city": "Shanghai",
+      "node_ids": [],
+      "source_type": null,
+      "status": "blocked_pending_review",
+      "reason": "no stable 495 node mapping; cannot generate executable query until taxonomy mapping resolved",
+      "target_fields": [],
+      "evidence_required": [],
+      "stop_conditions": []
+    },
+    {
+      "cell_id": "min_minbei",
+      "city": "Shanghai",
+      "node_ids": [],
+      "source_type": null,
+      "status": "blocked_pending_review",
+      "reason": "no stable 495 node mapping; cannot generate executable query until taxonomy mapping resolved",
+      "target_fields": [],
+      "evidence_required": [],
+      "stop_conditions": []
+    },
+    {
+      "cell_id": "min_fine_dining",
+      "city": "Shanghai",
+      "node_ids": [],
+      "source_type": null,
+      "status": "blocked_pending_review",
+      "reason": "no stable 495 node mapping; cannot generate executable query until taxonomy mapping resolved",
+      "target_fields": [],
+      "evidence_required": [],
+      "stop_conditions": []
+    },
+    {
+      "cell_id": "min_minnan_shacha_noodle",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.noodle",
+        "cuisine.china.fujian.minnan"
+      ],
+      "crossfacet_price": [
+        "economy",
+        "value",
+        "mid"
+      ],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "min_minnan_shacha_noodle",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.noodle",
+        "cuisine.china.fujian.minnan"
+      ],
+      "crossfacet_price": [
+        "economy",
+        "value",
+        "mid"
+      ],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "min_minnan_shacha_noodle",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.noodle",
+        "cuisine.china.fujian.minnan"
+      ],
+      "crossfacet_price": [
+        "economy",
+        "value",
+        "mid"
+      ],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "min_minnan_shacha_noodle",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.noodle",
+        "cuisine.china.fujian.minnan"
+      ],
+      "crossfacet_price": [
+        "economy",
+        "value",
+        "mid"
+      ],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "min_minnan_shacha_noodle",
+      "city": "Shanghai",
+      "node_ids": [
+        "offer.specialty.noodle",
+        "cuisine.china.fujian.minnan"
+      ],
+      "crossfacet_price": [
+        "economy",
+        "value",
+        "mid"
+      ],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    },
+    {
+      "cell_id": "min_putian_lor_mee",
+      "city": "Shanghai",
+      "node_ids": [],
+      "source_type": null,
+      "status": "blocked_pending_review",
+      "reason": "no stable 495 node mapping; cannot generate executable query until taxonomy mapping resolved",
+      "target_fields": [],
+      "evidence_required": [],
+      "stop_conditions": []
+    },
+    {
+      "cell_id": "min_minbei_smoked",
+      "city": "Shanghai",
+      "node_ids": [],
+      "source_type": null,
+      "status": "blocked_pending_review",
+      "reason": "no stable 495 node mapping; cannot generate executable query until taxonomy mapping resolved",
+      "target_fields": [],
+      "evidence_required": [],
+      "stop_conditions": []
+    },
+    {
+      "cell_id": "min_minnan_snack_sweet",
+      "city": "Shanghai",
+      "node_ids": [
+        "dish.snack",
+        "offer.sweet.dessert"
+      ],
+      "crossfacet_price": [
+        "economy",
+        "value"
+      ],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "min_minnan_snack_sweet",
+      "city": "Shanghai",
+      "node_ids": [
+        "dish.snack",
+        "offer.sweet.dessert"
+      ],
+      "crossfacet_price": [
+        "economy",
+        "value"
+      ],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "min_minnan_snack_sweet",
+      "city": "Shanghai",
+      "node_ids": [
+        "dish.snack",
+        "offer.sweet.dessert"
+      ],
+      "crossfacet_price": [
+        "economy",
+        "value"
+      ],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "min_minnan_snack_sweet",
+      "city": "Shanghai",
+      "node_ids": [
+        "dish.snack",
+        "offer.sweet.dessert"
+      ],
+      "crossfacet_price": [
+        "economy",
+        "value"
+      ],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "min_minnan_snack_sweet",
+      "city": "Shanghai",
+      "node_ids": [
+        "dish.snack",
+        "offer.sweet.dessert"
+      ],
+      "crossfacet_price": [
+        "economy",
+        "value"
+      ],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    },
+    {
+      "cell_id": "cat_standard_wet_market",
+      "city": "Shanghai",
+      "node_ids": [],
+      "source_type": null,
+      "status": "blocked_pending_review",
+      "reason": "no stable 495 node mapping; cannot generate executable query until taxonomy mapping resolved",
+      "target_fields": [],
+      "evidence_required": [],
+      "stop_conditions": []
+    },
+    {
+      "cell_id": "cat_market_stall",
+      "city": "Shanghai",
+      "node_ids": [
+        "format.place.stall"
+      ],
+      "crossfacet_price": [],
+      "source_type": "official_ledger",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "name+address from official list",
+        "list_version",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 0
+    },
+    {
+      "cell_id": "cat_market_stall",
+      "city": "Shanghai",
+      "node_ids": [
+        "format.place.stall"
+      ],
+      "crossfacet_price": [],
+      "source_type": "gov_open",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "public doc title/date",
+        "exact_ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "cat_market_stall",
+      "city": "Shanghai",
+      "node_ids": [
+        "format.place.stall"
+      ],
+      "crossfacet_price": [],
+      "source_type": "map_poi",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "poi id",
+        "coordinate",
+        "free-quota ledger ref"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "cat_market_stall",
+      "city": "Shanghai",
+      "node_ids": [
+        "format.place.stall"
+      ],
+      "crossfacet_price": [],
+      "source_type": "media_vertical",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "article url",
+        "named shop",
+        "published_at"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 1
+    },
+    {
+      "cell_id": "cat_market_stall",
+      "city": "Shanghai",
+      "node_ids": [
+        "format.place.stall"
+      ],
+      "crossfacet_price": [],
+      "source_type": "ugc_community",
+      "status": "plannable",
+      "target_fields": [
+        "entity_name",
+        "operating_entity_key",
+        "address.district",
+        "price_tier",
+        "cuisine_path",
+        "source_url",
+        "observed_at",
+        "review_status"
+      ],
+      "evidence_required": [
+        "independent post url",
+        "content_hash",
+        "independent diner role"
+      ],
+      "stop_conditions": [
+        "candidate_pool = 2x target_quota reached",
+        "free quota exhausted -> stop (map_poi)",
+        "source saturation: two consecutive pages no new entity",
+        "unsaturated cell marked incomplete_discovery; never backfill"
+      ],
+      "budget_weight": 2
+    }
+  ]
+}
